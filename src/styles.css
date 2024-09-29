@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  background-color: #faeab1;
+  margin: 0;
+}
+
+#current-date {
+  text-align: center;
+  color: #533c1f;
+  font-size: medium;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+}
+
+footer {
+  background-color: #c58940;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+footer img {
+  width: 100px;
+  height: auto;
+}
+footer p {
+  background-color: #c58940;
+  color: white;
+  display: block;
+  margin-top: 1px;
+  font-size: xx-small;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+nav img {
+  width: 50%;
+  background-color: #faf8f1;
+  margin-top: 20%;
+  margin-left: 23%;
+  margin-right: 20%;
+  margin-bottom: 10%;
+}
+
+#nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: #faf8f1;
+  transition: left 0.5s;
+  box-shadow: 2px 0 100px rgba(0, 0, 0, 0.3);
+}
+
+#hamburger {
+  display: block;
+  position: fixed;
+  font-size: 30px;
+  background-color: #c58940;
+  border: none;
+  color: #fcfaee;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  text-shadow: none;
+  z-index: 1000;
+  transition: color 0.3s ease;
+}
+
+#hamburger:hover {
+  color: #e5ba73;
+}
+
+#nav-menu.active {
+  left: 0;
+   z-index: 100;
+}
+
+#nav-menu li {
+  text-align: center;
+  padding: 16px 0;
+  background-color: #faf8f1;
+}
+
+#nav-menu li a {
+  color: #533c1f;
+  text-decoration: none;
+  display: block;
+  font-weight: 600;
+  background-color: #faf8f1;
+  transition: color 0.3s ease;
+}
+
+#nav-menu li a:hover {
+  color: #e5ba73;
+}
+
+div .box {
+  background-color: white;
+}
+
+div .container {
+  border: 2px dashed #e5ba73;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+main .article {
+  margin-bottom: 3rem;
+  padding: 10px;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  background-color: white;
+}
+
+main .article:hover {
+  transform: scale(1.1); /* Slight zoom for smoother effect */
+}
+
+h3 {
+  font-size: 30px;
+  text-align: center;
+  font-family: Georgia, serif;
+  margin: 0;
+  padding: 100px 20px 20px 20px;
+}
+
+main h1 {
+  color: white;
+  margin-bottom: 3rem;
+  margin-top: 0;
+  font-size: larger;
+  background-color: #e5ba73;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+main h2 {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #533c1f;
+  background-color: #faf8f1;
+}
+
+main p {
+  background-color: #faf8f1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+  border: 10px solid #faf8f1;
+}
+
+main a {
+  background-color: #faf8f1;
+  color: #7a5428;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  display: inline-block;
+  border-bottom: 2px dashed #e5ba73;
+}
+
+main a:hover {
+  color: #faeab1;
+}
+
+@media only screen and (min-width: 1200px) {
+  #current-date {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 60px;
+    margin-top: 10px;
+  }
+
+  div .box {
+    background-color: #faf8f1;
+  }
+
+  div .container {
+    border-style: dashed;
+    border-width: 2px;
+    margin: 10px;
+    border-color: #e5ba73;
+  }
+
+  main {
+    padding: 6rem;
+    padding-top: 2rem;
+  }
+
+  main h1 {
+    margin-bottom: 2rem;
+    font-size: 20px;
+  }
+
+  main .article {
+    margin-bottom: 1rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    
+  }
+
+  main .article:hover {
+    transform: translateY(-5px); /* Slightly move the element up */
+    box-shadow: 0 8px 20px #faeec4;
+  }
+
+  main img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  #hamburger {
+    background-color: transparent;
+    padding-left: 1rem;
+    font-size: 40px;
+    border: none;
+    color: #c58940;
+    margin: 0;
+  }
+
+  #hamburger:hover {
+    color: #e5ba73;
+    text-shadow: none;
+    width: fit-content;
+  }
+
+  #nav-menu {
+    width: 300px;
+  }
+
+  #nav-menu li a {
+    font-size: 20px;
+    font-weight: 450;
+  }
+
+  #top-stories {
+    width: 100%;
+    columns: 4;
+    column-gap: 1rem;
+    background-color: white;
+  }
+
+  footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  footer p {
+    font-size: medium;
+  }
+}
